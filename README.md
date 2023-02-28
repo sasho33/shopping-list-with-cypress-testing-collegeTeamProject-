@@ -13,4 +13,4 @@ You'll work as a team and each team member should work on a different functional
 <br/><br/>
 For start, please add your name to this list:
 <br/><br/>
-Jorge, 
+Jorge, Clara

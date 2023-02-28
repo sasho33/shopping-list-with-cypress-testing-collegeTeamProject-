@@ -21,42 +21,16 @@
 					<h1>Shopping List</h1>
 
 					<div class="input-group py-3">
-						<input type="text" class="form-control" /><button
-							class="btn btn-primary"
+						<input type="text" class="form-control" id="inputBox"/><button
+							class="btn btn-primary" id="addToList"
 							placeholder="Enter item here to add to shopping list.">
 							Add to list
 						</button>
 					</div>
 
-					<ul class="list-group">
+					<ul class="list-group" id="list">
 						<!-- example list items, remove these once created through the javascript -->
-						<li class="list-group-item">
-							<input
-								type="checkbox"
-								class="form-check-input me-1" />
-							<label for="" class="form-check-label"
-								>Item 1</label
-							>
-							<a class="float-end">Remove</a>
-						</li>
-						<li class="list-group-item">
-							<input
-								type="checkbox"
-								class="form-check-input me-1" />
-							<label for="" class="form-check-label"
-								>Item 2</label
-							>
-							<a class="float-end">Remove</a>
-						</li>
-						<li class="list-group-item">
-							<input
-								type="checkbox"
-								class="form-check-input me-1" />
-							<label for="" class="form-check-label"
-								>Item 3</label
-							>
-							<a class="float-end">Remove</a>
-						</li>
+						
 					</ul>
 				</div>
 				<!-- center column -->
@@ -64,5 +38,6 @@
 				<!-- right space column -->
 			</div>
 		</div>
+		<script src="./script.js"></script>
 	</body>
 </html>
