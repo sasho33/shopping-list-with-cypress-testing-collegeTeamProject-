@@ -1,33 +1,61 @@
-// this is the container for the list of items
-const groceries = document.getElementById("list")
-// this is the box that takes the input
-const inputBox = document.getElementById("inputBox")
-//this is the add to list button
-const addToList = document.getElementById("addToList")
-// adds event listener so that when u click 'add to list' button it calls addItem function
-addToList.addEventListener("click", () => {
-    addItem()
-})
+// Initialize the todo list
+const addBtn = document.getElementById('addToList');
+const list = document.querySelector('#todo-list');
+const newItemInput = document.querySelector('#todo-input');
+let checkboxes = list.querySelectorAll('[data-checkbox]');
+const deleteButtons = list.querySelectorAll('.delete-btn');
 
-// function to add item to list
-const addItem = () => {
-    // if the input box is empty an alert tells you to write an item in
-    if (inputBox.value === '') {
-        console.log("empty")
-        alert("Please enter an item.");
-        return
-        //inserts a list item into <ul></ul> tag with the users input.
-    } else { groceries.innerHTML += 
-        `<li class="list-group-item">
-        <input
-        type="checkbox"
-        class="form-check-input me-1" />
-        <label for="" class="form-check-label"
-        >${inputBox.value}</label
-        >
-        <a class="float-end">Remove</a>
-        </li>`
-    }   
-    // takes out value from the input box once submitted
-    inputBox.value = ""
-}
+console.log(checkboxes);
+// checkboxes.forEach((checkbox) => {
+//   checkbox.addEventListener('change', (event) => {
+//     const listItem = event.target.parentNode;
+//     console.log(event.target);
+//     if (event.target.checked) {
+//       listItem.style.textDecoration = 'line-through';
+//     } else {
+//       listItem.style.textDecoration = 'none';
+//     }
+//   });
+// });
+
+// deleteButtons.forEach((button) => {
+//   button.addEventListener('click', (event) => {
+//     const listItem = event.target.parentNode;
+//     list.removeChild(listItem);
+//   });
+// });
+
+list.addEventListener('click', (event) => {
+  if (event.target.classList.contains('delete-btn')) {
+    const listItem = event.target.parentNode;
+    list.removeChild(listItem);
+  }
+});
+
+list.addEventListener('change', (event) => {
+  if (event.target.type === 'checkbox') {
+    const listItem = event.target.parentNode;
+    if (event.target.checked) {
+      listItem.style.textDecoration = 'line-through';
+    } else {
+      listItem.style.textDecoration = 'none';
+    }
+  }
+});
+
+addBtn.addEventListener('click', () => {
+  // add new item functionality
+  const newItemText = newItemInput.value;
+  if (newItemText.trim() === '') {
+    return;
+  }
+  const newItem = document.createElement('li');
+  newItem.classList.add('todo-list-element');
+
+  newItem.innerHTML = `<input data-checkbox type="checkbox"> ${newItemText} <button class="delete-btn float-right btn btn-danger btn-sm">Delete</button>`;
+  list.appendChild(newItem);
+
+  newItemInput.value = '';
+
+  checkboxes = list.querySelectorAll('[data-checkbox]');
+});
