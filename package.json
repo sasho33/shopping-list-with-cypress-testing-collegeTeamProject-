@@ -1,0 +1,22 @@
+{
+  "name": "shopping-list-project-team-2",
+  "version": "1.0.0",
+  "description": "Hi Team 2! \r <br/><br/>\r In this task you and your team are required to build a shopping list app.\r <br/><br/>\r ![](readme-images/1.png)\r <br/><br/>\r ![](readme-images/2.png)\r <br/><br/>\r Is not essential that you use any framework to fulfil the task but, this could be a good exercise to practice your bootstrap skills, if you wish to.  \r <br/>\r You'll work as a team and each team member should work on a different functionality of the app.\r <br/><br/>\r For start, please add your name to this list:\r <br/><br/>\r Jorge, Clara",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EC-CodeSpace-0001/Shopping-List-Project-Team-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EC-CodeSpace-0001/Shopping-List-Project-Team-2/issues"
+  },
+  "homepage": "https://github.com/EC-CodeSpace-0001/Shopping-List-Project-Team-2#readme",
+  "dependencies": {
+    "cypress": "^12.7.0"
+  }
+}
